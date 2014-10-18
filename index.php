@@ -95,6 +95,18 @@
         <input type="checkbox" name="back_transparent" value="backTransparent"'.(($backTransparent==true)?' checked':'').'> Transparent
         <input type="submit" value="GENERATE"></form><hr/>';
         
+        
+		// display raw data
+    $text = QRcode::text($_REQUEST['data']);
+  	echo('<h2>Raw data</h2>');
+    echo '<pre>';
+    echo join("\n", $text);
+    echo '</pre>';         
+		echo('<hr/>');        
+        
+        
+        
+        
     // benchmark
     QRtools::timeBenchmark();    
 
