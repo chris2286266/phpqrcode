@@ -96,7 +96,7 @@
         <input type="submit" value="GENERATE"></form><hr/>';
         
         
-		// display raw data
+		//display raw data
     if (isset($_REQUEST['data'])) {
       $text = QRcode::text($_REQUEST['data']);
       echo('<h2>Raw data</h2>');
